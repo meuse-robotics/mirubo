@@ -167,7 +167,7 @@ void say_clock(){
 
 void say_goodnight(){
   isSpeaking = true;
-  myDFPlayer.playFolder(8,random(1,5)); // おやすみ
+  myDFPlayer.playFolder(7,random(1,5)); // おやすみ
   wait_speech();
   isSpeaking = false;
 }
