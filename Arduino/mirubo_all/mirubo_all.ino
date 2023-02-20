@@ -241,7 +241,7 @@ void say_weather(){
     else if(w.equals("Clear"))wNum = 2;
     else if(w.equals("Clouds"))wNum = 3;
     else if(w.equals("Snow"))wNum = 4;
-    myDFPlayer.playFolder(07,wNum); // weather
+    myDFPlayer.playFolder(8,wNum); // weather
     wait_speech();
     myDFPlayer.playFolder(06,random(1,3)); // です
     wait_speech();
