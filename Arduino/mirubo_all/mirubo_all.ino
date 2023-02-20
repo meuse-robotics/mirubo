@@ -233,7 +233,7 @@ void say_weather(){
     //Serial.println(pressure);
     //Serial.println(temp);
 
-    myDFPlayer.playFolder(07,random(5,6)); // 今日の天気は
+    myDFPlayer.playFolder(8,random(5,6)); // 今日の天気は
     wait_speech();
     int wNum = 3;
     String w = weather;
