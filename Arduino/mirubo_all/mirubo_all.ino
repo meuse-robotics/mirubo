@@ -384,17 +384,34 @@ void draw_angled_line(int x, int y, int x1, int y1, int size, int color) {
 /*****************/
 #define SV_PIN 13
 Servo myServo;
+int angle = 90;
+int delta = 1;
 
 void servo_up(){
-  myServo.write(110);
+  while(angle < 110){
+    angle++;
+    myServo.write(angle);
+    delay(30);
+  }
 }
 void servo_down(){
-  myServo.write(60);
+  while(angle > 60){
+    angle--;
+    myServo.write(angle);
+    delay(30);
+  }
 }
 void servo_down_and_up(){
-  myServo.write(60);
-  delay(1000);
-  myServo.write(110);
+  while(angle > 60){
+    angle--;
+    myServo.write(angle);
+    delay(30);
+  }
+  while(angle < 110){
+    angle++;
+    myServo.write(angle);
+    delay(30);
+  }
 }
 
 void setup() {
