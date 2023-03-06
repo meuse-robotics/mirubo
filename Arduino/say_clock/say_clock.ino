@@ -73,7 +73,9 @@ void init_dfplayer(){
 }
 
 void wait_speech(){
-  while(digitalRead(BUSY_PIN)==HIGH){delay(100);};
+  if(digitalRead(BUSY_PIN)==HIGH){
+    while(digitalRead(BUSY_PIN)==HIGH){delay(100);};
+  }
   while(digitalRead(BUSY_PIN)==LOW){delay(100);};
 }
 
